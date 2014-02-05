@@ -37,9 +37,7 @@
 
         private Task ReturnCompletedTask()
         {
-            var tsc = new TaskCompletionSource<int>();
-            tsc.TrySetResult(0);
-            return tsc.Task;
+            return Task.FromResult(0);
         }
     }
 }

@@ -118,12 +118,7 @@
 
         public Func<IDictionary<string, object>, Task> GetNextFunc()
         {
-            return objects =>
-            {
-                var tcs = new TaskCompletionSource<int>();
-                tcs.TrySetResult(123);
-                return tcs.Task;
-            };
+            return objects => Task.FromResult(123);
         }
 
         public RequiresHttps GetOwinHttps(Func<IDictionary<string, object>, Task> nextFunc, RequiresHttpsOptions options = null)

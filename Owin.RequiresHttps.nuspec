@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Owin.RequiresHttps</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>Owin.RequiresHttps</title>
         <authors>Jonathan Channon</authors>
         <licenseUrl>https://github.com/jchannon/Owin.RequiresHttps/blob/master/LICENSE</licenseUrl>
