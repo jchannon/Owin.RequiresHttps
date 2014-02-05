@@ -1,5 +1,4 @@
-Owin.Https
-==========
+#Owin.RequiresHttps
 
 An OWIN middleware component to determine HTTPS requests.
 
@@ -13,7 +12,7 @@ There is an optional OwinHttpsOptions tool which will route any `http` traffic t
     {
         public void Configuration(IAppBuilder app)
         {
-            var redirectOptions = new OwinHttpsOptions() { RedirectToHttpsPath = "https://mysecureapp.com" };
+            var redirectOptions = new RequiresHttpsOptions() { RedirectToHttpsPath = "https://mysecureapp.com" };
             app
                 .RequiresHttps(redirectOptions)
                 .UseNancy();

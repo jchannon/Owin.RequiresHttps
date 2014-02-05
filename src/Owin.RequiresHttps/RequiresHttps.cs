@@ -7,9 +7,9 @@
     public class RequiresHttps
     {
         private readonly Func<IDictionary<string, object>, Task> nextFunc;
-        private readonly OwinHttpsOptions options;
+        private readonly RequiresHttpsOptions options;
 
-        public RequiresHttps(Func<IDictionary<string, object>, Task> nextFunc, OwinHttpsOptions options)
+        public RequiresHttps(Func<IDictionary<string, object>, Task> nextFunc, RequiresHttpsOptions options)
         {
             this.nextFunc = nextFunc;
             this.options = options;

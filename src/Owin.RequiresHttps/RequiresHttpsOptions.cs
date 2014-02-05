@@ -1,6 +1,6 @@
 ﻿namespace Owin.RequiresHttps
 {
-    public class OwinHttpsOptions
+    public class RequiresHttpsOptions
     {
         public string RedirectToHttpsPath { get; set; }
     }

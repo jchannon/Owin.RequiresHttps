@@ -57,7 +57,7 @@
         {
             //Given
             var owinhttps = GetOwinHttps(GetNextFunc(),
-                new OwinHttpsOptions() { RedirectToHttpsPath = "http://www.google.co.uk" });
+                new RequiresHttpsOptions() { RedirectToHttpsPath = "http://www.google.co.uk" });
 
             var environment = new Dictionary<string, object>
             {
@@ -80,7 +80,7 @@
         {
             //Given
             var owinhttps = GetOwinHttps(GetNextFunc(),
-                new OwinHttpsOptions() {RedirectToHttpsPath = "http://www.google.co.uk"});
+                new RequiresHttpsOptions() { RedirectToHttpsPath = "http://www.google.co.uk" });
 
             var environment = new Dictionary<string, object>
             {
@@ -101,7 +101,7 @@
         {
             //Given
             var owinhttps = GetOwinHttps(GetNextFunc(),
-                new OwinHttpsOptions() { RedirectToHttpsPath = "" });
+                new RequiresHttpsOptions() { RedirectToHttpsPath = "" });
 
             var environment = new Dictionary<string, object>
             {
@@ -126,7 +126,7 @@
             };
         }
 
-        public RequiresHttps GetOwinHttps(Func<IDictionary<string, object>, Task> nextFunc, OwinHttpsOptions options = null)
+        public RequiresHttps GetOwinHttps(Func<IDictionary<string, object>, Task> nextFunc, RequiresHttpsOptions options = null)
         {
             return new RequiresHttps(nextFunc, options);
         }
