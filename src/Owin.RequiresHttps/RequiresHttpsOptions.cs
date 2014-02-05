@@ -1,4 +1,4 @@
-﻿namespace Owin.Https
+﻿namespace Owin.RequiresHttps
 {
     public class OwinHttpsOptions
     {

@@ -1,15 +1,15 @@
-﻿namespace Owin.Https
+﻿namespace Owin.RequiresHttps
 {
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
-    public class OwinHttps
+    public class RequiresHttps
     {
         private readonly Func<IDictionary<string, object>, Task> nextFunc;
         private readonly OwinHttpsOptions options;
 
-        public OwinHttps(Func<IDictionary<string, object>, Task> nextFunc, OwinHttpsOptions options)
+        public RequiresHttps(Func<IDictionary<string, object>, Task> nextFunc, OwinHttpsOptions options)
         {
             this.nextFunc = nextFunc;
             this.options = options;

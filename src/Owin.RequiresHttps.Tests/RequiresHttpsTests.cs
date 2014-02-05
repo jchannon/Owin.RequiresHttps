@@ -1,4 +1,4 @@
-﻿namespace Owin.Https.Tests
+﻿namespace Owin.RequiresHttps.Tests
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +8,6 @@
 
     public class OwinHttpsTests
     {
-
         [Fact]
         public void Should_Execute_Next_If_Https()
         {
@@ -127,9 +126,9 @@
             };
         }
 
-        public OwinHttps GetOwinHttps(Func<IDictionary<string, object>, Task> nextFunc, OwinHttpsOptions options = null)
+        public RequiresHttps GetOwinHttps(Func<IDictionary<string, object>, Task> nextFunc, OwinHttpsOptions options = null)
         {
-            return new OwinHttps(nextFunc, options);
+            return new RequiresHttps(nextFunc, options);
         }
     }
 }

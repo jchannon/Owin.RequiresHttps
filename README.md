@@ -15,7 +15,7 @@ There is an optional OwinHttpsOptions tool which will route any `http` traffic t
         {
             var redirectOptions = new OwinHttpsOptions() { RedirectToHttpsPath = "https://mysecureapp.com" };
             app
-                .Use<OwinHttps>(redirectOptions)
+                .RequiresHttps(redirectOptions)
                 .UseNancy();
         }
     }
